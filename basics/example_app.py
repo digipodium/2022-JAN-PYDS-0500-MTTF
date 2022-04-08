@@ -11,7 +11,6 @@ from oop.example_db import Task, PythonNews
 from sqlalchemy.engine import create_engine
 from sqlalchemy.orm import sessionmaker
 
-
 def opendb():
     engine =  create_engine('sqlite:///demo.sqlite3', echo=True)
     Session = sessionmaker(bind=engine)
