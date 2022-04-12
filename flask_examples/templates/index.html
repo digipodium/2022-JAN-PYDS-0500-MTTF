@@ -7,14 +7,33 @@
             <h3 class="text-center p-3">Website Traffic Analyser : Add New Website</h3>
             <form method="POST" class="card">
                 <div class="card-body">
+                    {% include "notify.html" %}
                     <div class="mb-3">
                         <label for="website">Website Url</label>
                         <input type="url" class="form-control" id="website" name="website">
                     </div>
-                    <div class="mb-3"> <!-- .mb3 -->
+                    <div class="mb-3">
+                        <!-- .mb3 -->
                         <label for="title">Website title</label>
                         <input type="text" class="form-control" id="title" name="title">
                     </div>
+                    
+                    <div class="mb-3">
+                        <label for="category">Website Category</label>
+                        <select name="category" id="category" class="form-select">
+                            <option value="">Select Category</option>
+                            <option value="1">Category 1</option>
+                            <option value="2">Category 2</option>
+                            <option value="3">Category 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ip">Collect IP data</label>
+                        <input type="checkbox" name="ip" id="ip" checked>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success">Save and Continue</button>
                 </div>
             </form>
         </div>
